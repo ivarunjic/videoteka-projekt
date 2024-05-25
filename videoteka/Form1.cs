@@ -16,5 +16,17 @@ namespace videoteka
         {
             InitializeComponent();
         }
+
+        private void btnKorisnik_Click(object sender, EventArgs e)
+        {
+            Form3 newForm = new Form3();
+            newForm.ShowDialog();
+        }
+
+        private void btnUrednik_Click(object sender, EventArgs e)
+        {
+            Form2 newForm = new Form2();
+            newForm.ShowDialog();
+        }
     }
 }
