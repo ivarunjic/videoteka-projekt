@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace videoteka
 {
@@ -19,8 +21,21 @@ namespace videoteka
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // if user i sifra iste kao potrebne za ulogirat se onda uci u formu
-            // else messagebox netocno korisnicko ime ili lozinka
+
+            string UnosImena = "Urednik";
+            string UnosSifre = "urednik123";
+
+            if (textBox1.Text == UnosImena && textBox2.Text == UnosSifre)
+            {
+                Form4 newForm = new Form4();
+                newForm.ShowDialog();
+            }
+
+            else
+            {
+                MessageBox.Show("Krivo uneseni podaci. Pokušajte ponovo!");
+            }
+
         }
     }
 }
