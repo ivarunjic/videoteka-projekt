@@ -45,32 +45,81 @@ namespace videoteka
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /*string razred = comboBox1.Text;
-            List<string> Razredi = new List<string>() { };
-
-            for (int i = 0; i < popisUcenika.Count; i++)
-            {
-                if (popisUcenika[i].razred == razred)
-                {
-                    Razredi.Add(popisUcenika[i].ime + " " + popisUcenika[i].prezime + " " + popisUcenika[i].razred + " " + popisUcenika[i].uspjeh);
-                }
-            }
-
-            listBox1.DataSource = Razredi;
-        }*/
-
-            string zanr=comboBox1.Text;
+            
+            string zanr = comboBox1.Text;
             List<string> Zanrovi = new List<string>() { };
 
-            for(int i = 0; i < popisFilmova.Count; i++)
+            foreach (var film in popisFilmova)
             {
-                if (popisFilmova[i].zanr == zanr)
+                if (film.Zanr.Contains(zanr))
                 {
-                    Zanrovi.Add(popisFilmova[i].naziv + " " + popisFilmova[i].godina + " " + popisFilmova[i].zanr + " ");
+                    Zanrovi.Add(film.Naziv + " " + film.Godina + " " + film.Zanr);
                 }
             }
 
-            listBox1.DataSource=Zanrovi;
+            listBox1.DataSource = Zanrovi;
+
+            if (comboBox1.Text == "Sve")
+            {
+                StreamReader sr = new StreamReader(FilePath);
+                string linija = sr.ReadLine();
+
+                while (linija != null)
+                {
+                    var razlomiti = new string[] { "," };
+                    popisFilmova.Add(new Film(linija));
+
+                    foreach (var c in razlomiti)
+                    {
+                        linija = linija.Replace(c, " ");
+                    }
+
+                    Zanrovi.Add(linija);
+                    linija = sr.ReadLine();
+
+                }
+                sr.Close();
+            }
+
+            else { }
+
+
+            /*for(int i = 0; i < popisFilmova.Count; i++)
+            {
+                if (popisFilmova[i].Zanr == zanr)
+                {
+                    Zanrovi.Add(popisFilmova[i].Naziv + " " + popisFilmova[i].Godina + " " + popisFilmova[i].Zanr);
+                }
+
+            }
+
+            listBox1.DataSource=Zanrovi;*/
+
+            /*private void ListFilmsByGenre(string zanr)
+    {
+        List<string> Zanrovi = new List<string>();*/
+
+        
+  
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            string min= "1970";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string query = textBox1.Text.Trim().ToLower();
+            if (!string.IsNullOrWhiteSpace(query))
+            {
+                var results = popisFilmova.Where(film => film.Naziv.ToLower().Contains(query) || film.Godina.ToLower().Contains(query) || film.Zanr.ToLower().Contains(query)).ToList();
+                comboBox1(results);
+            }
+            else
+            {
+                MessageBox.Show("Molimo unesite tekst za pretragu!");
+            }
         }
     }
 }

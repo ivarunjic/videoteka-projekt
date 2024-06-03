@@ -49,6 +49,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "pretraži";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -92,6 +93,7 @@
             this.checkBox1.TabIndex = 3;
             this.checkBox1.Text = "Godina izlaska";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label2
             // 

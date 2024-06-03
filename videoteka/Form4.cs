@@ -21,26 +21,10 @@ namespace videoteka
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /* StreamWriter sw = new StreamWriter(filePath, true);
-            string tekstUcenici;
-            tekstUcenici = textBox1.Text + "|" + textBox2.Text + "|" + comboBox1.Text + "|" + comboBox2.Text ;
-            if (tekstUcenici != "")
-            {
-                sw.WriteLine(tekstUcenici);
-                textBox1.Text = "";
-                textBox2.Text = "";
-                comboBox1.Text = "";
-                comboBox2.Text = "";
-                MessageBox.Show("Podaci su spremljeni!");
-
-            }
-
-            sw.Close();*/
-
             StreamWriter sw = new StreamWriter(FilePath, true);
 
             string Filmovi;
-            Filmovi = textBox1.Text + "," +  comboBox1.Text + "," + checkedListBox1.Text + ",";
+            Filmovi = textBox1.Text + "," +  comboBox1.Text + "," + checkedListBox1.Text;
 
             if (Filmovi != "")
             {

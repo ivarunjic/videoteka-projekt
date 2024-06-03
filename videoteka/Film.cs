@@ -9,13 +9,15 @@ namespace videoteka
 {
     internal class Film
     {
-        public string naziv, godina, zanr;
+        public string Naziv { get; set; }
+        public string Godina { get; set; }
+        public string Zanr { get; set; }
 
         public Film(string naziv, string godina, string zanr)
         {
-            this.naziv = naziv;
-            this.godina = godina;
-            this.zanr = zanr;
+            Naziv = naziv;
+            Godina = godina;
+            Zanr = zanr;
         }
 
         public Film(string unos)
@@ -24,67 +26,41 @@ namespace videoteka
             int brojac = 0;
             int i;
 
-            naziv = "Nije uneseno";
-            godina = "Nije uneseno";
-            zanr = "Nije uneseno";
-
-            for(i = 0; i < unos.Length; i++)
-            {
-                if(unos[i] == ',' || i == unos.Length - 1 )
-                {
-                    if (brojac == 0)
-                    {
-                        naziv = trenutno;
-                        brojac++;
-                    }
-                    else if (brojac == 1)
-                    {
-                        godina = trenutno;
-                        brojac++;
-                    }
-                    else
-                    {
-                        trenutno += unos[i];
-                        zanr = trenutno;
-                    }
-
-                    trenutno = "";
-                }
-                else trenutno += unos[i];
-            }
-        }
-
-        /*
+            Naziv = "Nije uneseno";
+            Godina = "Nije uneseno";
+            Zanr = "Nije uneseno";
 
             for (i = 0; i < unos.Length; i++)
             {
-                if (unos[i] == '|' || i == unos.Length - 1)
+                if (unos[i] == ',' || i == unos.Length - 1)
                 {
                     if (brojac == 0)
                     {
-                        ime = trenutno;
+                        Naziv = trenutno;
                         brojac++;
                     }
                     else if (brojac == 1)
                     {
-                        prezime = trenutno;
-                        brojac++;
-                    }
-                    else if (brojac == 2)
-                    {
-                        razred = trenutno;
+                        Godina = trenutno;
                         brojac++;
                     }
                     else
                     {
-                        trenutno += unos[i];
-                        uspjeh = trenutno;
+                        if (i != unos.Length - 1)
+                        {
+                            trenutno += unos[i];
+                        }
+                        Zanr = trenutno;
                     }
 
                     trenutno = "";
                 }
-                else trenutno += unos[i];
+                else
+                {
+                    trenutno += unos[i];
+                }
             }
-        }*/
+        }
+
     }
 }
