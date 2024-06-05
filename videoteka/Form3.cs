@@ -13,6 +13,8 @@ namespace videoteka
 {
     public partial class Form3 : Form
     {
+        string stanjekombo = "";
+
         string FilePath = "PopisFilmova.txt";
         List<Film> popisFilmova = new List<Film>();
 
@@ -77,6 +79,8 @@ namespace videoteka
             }
             listBox1.DataSource = Zanrovi;
 
+            stanjekombo = zanr;
+            Console.WriteLine(stanjekombo);
 
 
             /*for(int i = 0; i < popisFilmova.Count; i++)
@@ -109,12 +113,29 @@ namespace videoteka
             if (!string.IsNullOrWhiteSpace(query))
             {
                 List<string> Zanrovi = new List<string>();
-                var results = popisFilmova.Where(film => film.Naziv.ToLower().Contains(query) || film.Godina.Contains(query) || film.Zanr.ToLower().Contains(query)).ToList();
-
-                foreach (var film in results)
+                var results = popisFilmova.Where(film => film.Naziv.ToLower().Contains(query) || film.Godina.Contains(query)).ToList();
+            
+                Console.WriteLine(stanjekombo);
+                if( stanjekombo != "Sve" & stanjekombo!="" )
                 {
+                    Console.WriteLine("zanrirano");
+                    foreach (var film in results)
+                    {
+                        if (film.Zanr == stanjekombo)
+                        {
+                            Zanrovi.Add(film.Naziv + " " + film.Godina + " " + film.Zanr);
+                        }
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("nezanrirano");
+                    foreach (var film in results)
+                    {
 
-                    Zanrovi.Add(film.Naziv + " " + film.Godina + " " + film.Zanr);
+                        Zanrovi.Add(film.Naziv + " " + film.Godina + " " + film.Zanr);
+
+                    }
 
                 }
                 listBox1.DataSource = Zanrovi;
