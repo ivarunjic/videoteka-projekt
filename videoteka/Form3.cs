@@ -14,9 +14,9 @@ namespace videoteka
 {
     public partial class Form3 : Form
     {
-        string stanjekombo = "";
+        string comboboxstanje = "";
         bool abecedno = false;
-        bool numericki = true;
+        bool brojcano = true;
         string pretraga = "";
         string FilePath = "PopisFilmova.txt";
         List<Film> popisFilmova = new List<Film>();
@@ -30,7 +30,7 @@ namespace videoteka
         {
             popisFilmova = popisPocetni;
 
-            if (numericki) {
+            if (brojcano) {
                 
                 popisFilmova = popisFilmova.OrderBy(o => o.Godina).ToList();
             
@@ -51,11 +51,11 @@ namespace videoteka
 
             }
 
-            if (stanjekombo != "Sve" & stanjekombo != "")
+            if (comboboxstanje != "Sve" & comboboxstanje != "")
             {
                 foreach (var film in popisFilmova)
                 {
-                    if (film.Zanr == stanjekombo)
+                    if (film.Zanr == comboboxstanje)
                     {
                         Zanrovi.Add(film.Naziv + " " + film.Godina + " " + film.Zanr);
                     }
@@ -75,7 +75,7 @@ namespace videoteka
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             string zanr = comboBox1.Text;
-            stanjekombo = zanr;
+            comboboxstanje = zanr;
             Ispis();
         }
 
@@ -107,6 +107,19 @@ namespace videoteka
             sr.Close();
         }
 
+        private void checkedListBox1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (abecedno = true)
+            {
+                brojcano = false;
+                Ispis();
+            }
 
+            else if (brojcano = true)
+            {
+                abecedno = false;
+                Ispis();
+            }
+        }
     }
 }
