@@ -108,13 +108,28 @@ namespace videoteka
             string query = textBox1.Text.Trim().ToLower();
             if (!string.IsNullOrWhiteSpace(query))
             {
-                var results = popisFilmova.Where(film => film.Naziv.ToLower().Contains(query) || film.Godina.ToLower().Contains(query) || film.Zanr.ToLower().Contains(query)).ToList();
-        //        comboBox1(results);
+                List<string> Zanrovi = new List<string>();
+                var results = popisFilmova.Where(film => film.Naziv.ToLower().Contains(query) || film.Godina.Contains(query) || film.Zanr.ToLower().Contains(query)).ToList();
+
+                foreach (var film in results)
+                {
+
+                    Zanrovi.Add(film.Naziv + " " + film.Godina + " " + film.Zanr);
+
+                }
+                listBox1.DataSource = Zanrovi;
+
+
             }
             else
             {
                 MessageBox.Show("Molimo unesite tekst za pretragu!");
             }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
