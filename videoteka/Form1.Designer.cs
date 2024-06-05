@@ -74,7 +74,7 @@
             this.Controls.Add(this.btnKorisnik);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Početna stranica";
             this.ResumeLayout(false);
             this.PerformLayout();
 

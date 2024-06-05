@@ -46,10 +46,8 @@ namespace videoteka
                     }
                     else
                     {
-                        if (i != unos.Length - 1)
-                        {
-                            trenutno += unos[i];
-                        }
+                        trenutno += unos[i];
+
                         Zanr = trenutno;
                     }
 

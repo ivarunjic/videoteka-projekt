@@ -184,7 +184,7 @@
             this.ClientSize = new System.Drawing.Size(311, 388);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form4";
-            this.Text = "Form4";
+            this.Text = "Unos filma";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
