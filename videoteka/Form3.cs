@@ -49,39 +49,34 @@ namespace videoteka
             string zanr = comboBox1.Text;
             List<string> Zanrovi = new List<string>() { };
 
-            foreach (var film in popisFilmova)
+            Console.WriteLine(popisFilmova[1].Zanr);
+            Console.WriteLine(zanr);
+
+            if (zanr != "Sve")
             {
-                if (film.Zanr.Contains(zanr))
+                foreach (var film in popisFilmova)
                 {
-                    Zanrovi.Add(film.Naziv + " " + film.Godina + " " + film.Zanr);
+                    Console.WriteLine(film.Zanr + "cetvrtitest");
+                    if (film.Zanr.Contains(zanr))
+                    {
+                        Zanrovi.Add(film.Naziv + " " + film.Godina + " " + film.Zanr);
+                    }
                 }
             }
+            else
+            {
 
+                foreach ( var film in popisFilmova)
+                {
+
+                    Console.WriteLine(film.Zanr + "trecitest");
+                    Zanrovi.Add(film.Naziv + " " + film.Godina + " " + film.Zanr);
+
+                }
+
+            }
             listBox1.DataSource = Zanrovi;
 
-            if (comboBox1.Text == "Sve")
-            {
-                StreamReader sr = new StreamReader(FilePath);
-                string linija = sr.ReadLine();
-
-                while (linija != null)
-                {
-                    var razlomiti = new string[] { "," };
-                    popisFilmova.Add(new Film(linija));
-
-                    foreach (var c in razlomiti)
-                    {
-                        linija = linija.Replace(c, " ");
-                    }
-
-                    Zanrovi.Add(linija);
-                    linija = sr.ReadLine();
-
-                }
-                sr.Close();
-            }
-
-            else { }
 
 
             /*for(int i = 0; i < popisFilmova.Count; i++)
@@ -114,7 +109,7 @@ namespace videoteka
             if (!string.IsNullOrWhiteSpace(query))
             {
                 var results = popisFilmova.Where(film => film.Naziv.ToLower().Contains(query) || film.Godina.ToLower().Contains(query) || film.Zanr.ToLower().Contains(query)).ToList();
-                comboBox1(results);
+        //        comboBox1(results);
             }
             else
             {
