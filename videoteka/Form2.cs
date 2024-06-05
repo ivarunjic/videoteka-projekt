@@ -22,8 +22,8 @@ namespace videoteka
         private void button1_Click(object sender, EventArgs e)
         {
 
-            string UnosImena = "Urednik";
-            string UnosSifre = "urednik123";
+            string UnosImena = "a";
+            string UnosSifre = "a";
 
             if (textBox1.Text == UnosImena && textBox2.Text == UnosSifre)
             {
