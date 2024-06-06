@@ -37,6 +37,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Goudy Stout", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.PaleVioletRed;
             this.label1.Location = new System.Drawing.Point(104, 114);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(324, 37);
@@ -46,6 +47,7 @@
             // btnKorisnik
             // 
             this.btnKorisnik.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKorisnik.ForeColor = System.Drawing.Color.PaleVioletRed;
             this.btnKorisnik.Location = new System.Drawing.Point(75, 188);
             this.btnKorisnik.Name = "btnKorisnik";
             this.btnKorisnik.Size = new System.Drawing.Size(142, 41);
@@ -57,6 +59,7 @@
             // btnUrednik
             // 
             this.btnUrednik.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUrednik.ForeColor = System.Drawing.Color.PaleVioletRed;
             this.btnUrednik.Location = new System.Drawing.Point(313, 188);
             this.btnUrednik.Name = "btnUrednik";
             this.btnUrednik.Size = new System.Drawing.Size(142, 41);
@@ -69,6 +72,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(551, 573);
             this.Controls.Add(this.btnUrednik);
             this.Controls.Add(this.btnKorisnik);

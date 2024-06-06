@@ -16,7 +16,7 @@ namespace videoteka
     {
         string comboboxstanje = "";
         bool abecedno = false;
-        bool brojcano = true;
+        bool brojcano = false;
         string pretraga = "";
         string FilePath = "PopisFilmova.txt";
         List<Film> popisFilmova = new List<Film>();
@@ -109,16 +109,25 @@ namespace videoteka
 
         private void checkedListBox1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (abecedno = true)
-            {
-                brojcano = false;
-                Ispis();
-            }
 
-            else if (brojcano = true)
+            int izabrani = checkedListBox1.SelectedIndex;
+            if (izabrani == 0)
             {
-                abecedno = false;
+
+                abecedno = checkedListBox1.GetItemCheckState(izabrani) == CheckState.Checked;
+                brojcano = false;
+                checkedListBox1.SetItemCheckState(1, CheckState.Unchecked);
                 Ispis();
+
+            }
+            else if (izabrani == 1)
+            {
+
+                brojcano = checkedListBox1.GetItemCheckState(izabrani) == CheckState.Checked;
+                abecedno = false;
+                checkedListBox1.SetItemCheckState(0, CheckState.Unchecked);
+                Ispis();
+
             }
         }
     }
