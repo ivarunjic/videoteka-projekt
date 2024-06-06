@@ -13,7 +13,7 @@ namespace videoteka
 {
     public partial class Form4 : Form
     {
-        string FilePath = "PopisFilmova.txt";
+       
         public Form4()
         {
             InitializeComponent();
@@ -21,22 +21,15 @@ namespace videoteka
 
         private void button1_Click(object sender, EventArgs e)
         {
-            StreamWriter sw = new StreamWriter(FilePath, true);
+           string str=textBox1.Text+","+comboBox1.Text+","+checkedListBox1.Text;
+            Admin.SpremiUDatoteku(str);
+            textBox1.Text = "";
+            comboBox1.Text = "";
+            checkedListBox1.Text = "";
+        }
 
-            string Filmovi;
-            Filmovi = textBox1.Text + "," +  comboBox1.Text + "," + checkedListBox1.Text;
-
-            if (Filmovi != "")
-            {
-                sw.WriteLine(Filmovi);
-                textBox1.Text = "";
-                comboBox1.Text = "";
-                checkedListBox1.Text = "";
-
-                MessageBox.Show("Podaci o filmu su spremljeni!");
-            }
-
-            sw.Close();
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
 
         }
     }
