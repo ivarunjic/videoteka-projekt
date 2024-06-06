@@ -1,0 +1,70 @@
+Inception,2010,Akcija,Drama
+The Godfather,1972,Drama
+The Matrix,1999,Akcija,Drama
+The Shining,1980,Horor
+Titanic,1997,Drama,Romansa
+Mad Max: Fury Road,2015,Akcija
+Eternal Sunshine of the Spotless Mind,2004,Drama,Romansa
+Star Wars: Episode IV - A New Hope,1977,Akcija
+Ghostbusters,1984,Komedija
+Gladiator,2000,Akcija,Drama
+The Wolf of Wall Street,2013,Komedija,Drama
+Pulp Fiction,1994,Akcija,Komedija
+When Harry Met Sally,1989,Komedija,Romansa
+The Sixth Sense,1999,Horor,Drama
+Grease,1978,Komedija,Romansa
+The Dark Knight,2008,Akcija,Drama
+Top Gun,1986,Akcija,Romansa
+The Silence of the Lambs,1991,Horor,Drama
+La La Land,2016,Komedija,Romansa
+E.T. the Extra-Terrestrial,1982,Drama
+Fight Club,1999,Drama
+The Exorcist,1973,Horor
+Back to the Future,1985,Komedija
+Braveheart,1995,Akcija
+Pretty Woman,1990,Romansa
+Schindler's List,1993,Drama
+Die Hard,1988,Akcija
+Forrest Gump,1994,Drama
+The Terminator,1984,Akcija
+Jaws,1975,Horor
+Goodfellas,1990,Drama
+Rocky,1976,Drama
+The Big Lebowski,1998,Komedija
+The Breakfast Club,1985,Drama
+The Notebook,2004,Romansa
+The Blair Witch Project,1999,Horor
+Jurassic Park,1993,Akcija
+Ghost,1990,Romansa
+Terminator 2: Judgment Day,1991,Akcija
+Seven,1995,Horor
+Ferris Bueller's Day Off,1986,Komedija
+The Pursuit of Happyness,2006,Drama
+Scarface,1983,Akcija
+The Princess Bride,1987,Komedija
+A Beautiful Mind,2001,Drama
+Groundhog Day,1993,Komedija
+Moulin Rouge!,2001,Romansa
+Alien,1979,Horor
+The Departed,2006,Akcija
+Love Actually,2003,Romansa
+Gladiator,2000,Akcija
+Saving Private Ryan,1998,Akcija
+The Social Network,2010,Drama
+Good Will Hunting,1997,Drama
+The Conjuring,2013,Horor
+The Great Gatsby,2013,Drama
+Slumdog Millionaire,2008,Drama
+12 Years a Slave,2013,Drama
+Shutter Island,2010,Drama
+Joker,2019,Drama
+Bird Box,2018,Horor
+Get Out,2017,Horor
+Crazy Rich Asians,2018,Komedija
+The Shape of Water,2017,Romansa
+A Quiet Place,2018,Horor
+Knives Out,2019,Komedija
+The Revenant,2015,Drama
+Jojo Rabbit,2019,Komedija
+The Martian,2015,Drama
+Casablanca,1942,Romansa
