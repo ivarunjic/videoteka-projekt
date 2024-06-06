@@ -30,10 +30,11 @@ namespace videoteka
         {
             popisFilmova = popisPocetni;
 
-            if (brojcano) {
-                
+            if (brojcano)
+            {
+
                 popisFilmova = popisFilmova.OrderBy(o => o.Godina).ToList();
-            
+
             }
             else if (abecedno)
             {
@@ -78,14 +79,6 @@ namespace videoteka
             comboboxstanje = zanr;
             Ispis();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string query = textBox1.Text.Trim().ToLower();
-            pretraga = query;
-            Ispis();
-        }
-
         private void Form3_Load(object sender, EventArgs e)
         {
             StreamReader sr = new StreamReader(FilePath);
@@ -107,9 +100,8 @@ namespace videoteka
             sr.Close();
         }
 
-        private void checkedListBox1_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             int izabrani = checkedListBox1.SelectedIndex;
             if (izabrani == 0)
             {
@@ -130,5 +122,13 @@ namespace videoteka
 
             }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string query = textBox1.Text.Trim().ToLower();
+            pretraga = query;
+            Ispis();
+        }
     }
 }
+   

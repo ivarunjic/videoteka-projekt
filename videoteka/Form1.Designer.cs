@@ -46,6 +46,8 @@
             // 
             // btnKorisnik
             // 
+            this.btnKorisnik.BackColor = System.Drawing.SystemColors.Window;
+            this.btnKorisnik.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKorisnik.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKorisnik.ForeColor = System.Drawing.Color.PaleVioletRed;
             this.btnKorisnik.Location = new System.Drawing.Point(75, 188);
@@ -53,26 +55,28 @@
             this.btnKorisnik.Size = new System.Drawing.Size(142, 41);
             this.btnKorisnik.TabIndex = 1;
             this.btnKorisnik.Text = "KORISNIK";
-            this.btnKorisnik.UseVisualStyleBackColor = true;
+            this.btnKorisnik.UseVisualStyleBackColor = false;
             this.btnKorisnik.Click += new System.EventHandler(this.btnKorisnik_Click);
             // 
             // btnUrednik
             // 
+            this.btnUrednik.BackColor = System.Drawing.SystemColors.Window;
+            this.btnUrednik.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUrednik.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUrednik.ForeColor = System.Drawing.Color.PaleVioletRed;
             this.btnUrednik.Location = new System.Drawing.Point(313, 188);
             this.btnUrednik.Name = "btnUrednik";
             this.btnUrednik.Size = new System.Drawing.Size(142, 41);
             this.btnUrednik.TabIndex = 2;
-            this.btnUrednik.Text = "UREDNIK";
-            this.btnUrednik.UseVisualStyleBackColor = true;
+            this.btnUrednik.Text = "DJELATNIK";
+            this.btnUrednik.UseVisualStyleBackColor = false;
             this.btnUrednik.Click += new System.EventHandler(this.btnUrednik_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(551, 573);
             this.Controls.Add(this.btnUrednik);
             this.Controls.Add(this.btnKorisnik);
